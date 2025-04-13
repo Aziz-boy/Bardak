@@ -33,7 +33,7 @@ const ChatApp = () => {
       setIsTyping(true); // Bot yozmoqda...
 
       try {
-        const response = await axios.post("http://localhost:5000/api/chat", { message });
+        const response = await axios.post("https://bardak-backend.onrender.com/api/chat", { message });
         const botMessage = {
           user: "AI",
           text: response.data.reply,
